@@ -1,2 +1,1 @@
-# js-core
-A systematic, question-by-question deep dive into JavaScript fundamentals and core mechanics. Includes progressive challenges and real-world projects.
+Welcome! This repository is a personal journal of my JavaScript learning journey. Here, I am uploading and organizing all the JavaScript projects I build—from simple beginner scripts to fully functional, advanced applications.
