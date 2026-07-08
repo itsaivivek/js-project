@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+
+.taskFinished {
+    text-decoration: line-through;
+    color: #7b7878;
+}
+
+.dark {
+
+    color: white;
+}
+
+
+div[placeholder] {
+  position: relative;       /* Required so the absolute placeholder stays inside this div */
+  min-height: 100px;        /* Height for visibility */
+
+  padding: 10px;            /* Your normal content will respect this padding */
+}
+
+/* 2. Position and center ONLY the placeholder */
+div[placeholder]:empty::before {
+  content: attr(placeholder);
+  color: #a9a9a9;
+  pointer-events: none;
+  
+  /* Absolute centering trick */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  white-space: nowrap;      /* Prevents the placeholder from wrapping weirdly */
+}

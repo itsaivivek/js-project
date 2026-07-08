@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Todo List App</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style type="text/tailwindcss">
+        /* Checks for EITHER the .dark class OR the system preference */
+    /* Keeps theme matching strictly linked to the .dark class */
+    @custom-variant dark (&:where(.dark, .dark *));
+  </style>
+
+    <!-- 3. Prevent theme flickering on page reload -->
+    <script>
+        // Applies theme classes to the <html> tag based on user preference
+  function applyTheme() {
+    const savedTheme = localStorage.getItem('theme') || 'system';
+    
+    if (savedTheme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else if (savedTheme === 'light') {
+      document.documentElement.classList.remove('dark');
+    } else {
+      // If set to system, read the operating system preference
+      const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.classList.toggle('dark', systemDark);
+    }
+  }
+  
+  applyTheme();
+    </script>
+</head>
+
+<body class="flex items-center justify-center min-h-screen bg-neutral-300 dark:bg-neutral-800 dark:text-white">
+    <div class="main flex flex-col gap-4 bg-white border w-120 p-8 rounded-2xl shadow-2xl dark:bg-zinc-800">
+        <div class="top flex justify-between">
+            <div class="title">
+                <h1 class="text-4xl font-semibold max-[350px]:text-3xl">Todo List</h1>
+                <p class="text-neutral-700 dark:text-neutral-300">Stay productive</p>
+            </div>
+            <div class="flex items-center gap-2 max-[420px]:flex-col">
+                <label for="themeSelect"
+                    class="text-sm font-medium text-neutral-600 dark:text-neutral-400">Theme:</label>
+                <select id="themeSelect"
+                    class="border border-neutral-300 dark:border-neutral-600 bg-white dark:bg-zinc-800 rounded-xl px-3 py-1.5 cursor-pointer text-sm outline-none focus:border-orange-500">
+                    <option value="light">☀️ Light</option>
+                    <option value="dark">🌙 Dark</option>
+                    <option value="system">💻 System</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="center flex items-center relative">
+            <form id="taskform" class="w-full" action="" autocomplete="off">
+                <input id="newtask"
+                    class="outline-blue-500 bg-gray-300 dark:bg-gray-800 border border-gray-600 w-full px-6 py-3 rounded-4xl"
+                    type="text" placeholder="Add a new task...">
+                <input
+                    class="rounded-4xl cursor-pointer bg-orange-600 text-white py-3 px-8 absolute right-0 h-full top-0.2"
+                    form="taskform" type="submit" value="Add">
+            </form>
+        </div>
+
+        <div class="bottom flex flex-col gap-3">
+            <div class="stats flex justify-between">
+                <p>Total: <span id="total">0</span></p>
+                <p class="text-green-600">Completed: <span id="completed">0</span></p>
+            </div>
+            <div class="tasks flex flex-col gap-2 text-lg max-h-60 min-h-20 overflow-y-auto overflow-x-hidden
+            [&::-webkit-scrollbar]:w-1 
+            [&::-webkit-scrollbar-track]:bg-transparent 
+            [&::-webkit-scrollbar-thumb]:bg-neutral-600 
+            [&::-webkit-scrollbar-thumb]:rounded-full 
+            [&::-webkit-scrollbar-button]:hidden""
+            placeholder="No Tasks">
+
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+</body>
+
+</html>
