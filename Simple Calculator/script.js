@@ -9,16 +9,6 @@ function syncDropdownUI() {
     themeSelect.value = currentSaved;
 }
 
-function setBtnDarkorLight(state, ){
-
-    if(state === 'dark'){
-        document.querySelectorAll(".btn").forEach(btn => { btn.classList.add('darkBtn') })
-
-    }
-    else if(state === 'light'){
-        document.querySelectorAll(".btn").forEach(btn => { btn.classList.remove('darkBtn') })
-    }
-}
 
 // Manage theme visibility
 function updateThemeVisibility() {
@@ -27,10 +17,8 @@ function updateThemeVisibility() {
 
     if (selectedMode === 'dark') {
         document.documentElement.classList.add('dark');
-        setBtnDarkorLight('dark');
     } else if (selectedMode === 'light') {
         document.documentElement.classList.remove('dark');
-        setBtnDarkorLight('light')
     }
     else {
         // if system is active then select system preference

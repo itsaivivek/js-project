@@ -37,45 +37,48 @@
   </script>
 </head>
 
-<body class="flex flex-col justify-center items-center min-h-screen gap-4 dark:bg-zinc-800 dark:text-white font-semibold">
+<body
+  class="flex flex-col justify-center items-center min-h-screen gap-4 dark:bg-zinc-800 dark:text-white font-semibold">
 
   <div class="flex items-center gap-2 max-[420px]:flex-col">
-                <label for="themeSelect"
-                    class="text-sm font-medium text-neutral-600 dark:text-neutral-400">Theme:</label>
-                <select id="themeSelect"
-                    class="border border-neutral-300 dark:border-neutral-600 bg-white dark:bg-zinc-800 rounded-xl px-3 py-1.5 cursor-pointer text-sm outline-none focus:border-orange-500">
-                    <option value="light">☀️ Light</option>
-                    <option value="dark">🌙 Dark</option>
-                    <option value="system">💻 System</option>
-                </select>
-            </div>
-
-<div class="main border-black border w-full max-w-md mx-4 h-auto flex flex-col gap-4 p-4 dark:bg-[#3f4042f4] dark:text-neutral-200 text-5xl shadow-2xl dark:contrast-120 bg-neutral-200">
-  
-  <div class="display border rounded-lg border-black h-fit shadow-inner dark:bg-neutral-700 flex justify-end items-center text-5xl md:text-7xl overflow-hidden w-full dark:text-white text-black bg-slate-200"
-     placeholder="0"></div>
-    
-  <div class="buttonContainer grid grid-cols-4 gap-2 dark:text-white text-3xl md:text-5xl">
-    <button class="btn dark:bg-[#424549] specialOperator p-3 md:p-4" value="clear">C</button>
-    <button class="btn dark:bg-[#424549] specialOperator p-3 md:p-4" value="allClear">AC</button>
-    <button class="btn dark:bg-[#424549] p-3 md:p-4" value="/">&divide;</button>
-    <button class="btn dark:bg-[#424549] p-3 md:p-4" value="*">&times;</button>
-    <button class="btn dark:bg-[#424549] p-3 md:p-4" value="7">7</button>
-    <button class="btn dark:bg-[#424549] p-3 md:p-4" value="8">8</button>
-    <button class="btn dark:bg-[#424549] p-3 md:p-4" value="9">9</button>
-    <button class="btn dark:bg-[#424549] p-3 md:p-4" value="-">-</button>
-    <button class="btn dark:bg-[#424549] p-3 md:p-4" value="4">4</button>
-    <button class="btn dark:bg-[#424549] p-3 md:p-4" value="5">5</button>
-    <button class="btn dark:bg-[#424549] p-3 md:p-4" value="6">6</button>
-    <button class="btn dark:bg-[#424549] p-3 md:p-4" value="+">+</button>
-    <button class="btn dark:bg-[#424549] p-3 md:p-4" value="1">1</button>
-    <button class="btn dark:bg-[#424549] p-3 md:p-4" value="2">2</button>
-    <button class="btn dark:bg-[#424549] p-3 md:p-4" value="3">3</button>
-    <button class="btn dark:specialOperator row-span-2 bg-orange-700! brightness-125 p-3 md:p-4" value="equals">=</button>
-    <button class="btn dark:bg-[#424549] col-span-2 p-3 md:p-4" value="0">0</button>
-    <button class="btn dark:bg-[#424549] font-extrabold p-3 md:p-4" value=".">&middot;</button>
+    <label for="themeSelect" class="text-sm font-medium text-neutral-600 dark:text-neutral-400">Theme:</label>
+    <select id="themeSelect"
+      class="border border-neutral-300 dark:border-neutral-600 bg-white dark:bg-zinc-800 rounded-xl px-3 py-1.5 cursor-pointer text-sm outline-none focus:border-orange-500">
+      <option value="light">☀️ Light</option>
+      <option value="dark">🌙 Dark</option>
+      <option value="system">💻 System</option>
+    </select>
   </div>
-</div>
+
+  <div
+    class="main border-black border w-full max-w-md mx-4 h-auto flex flex-col gap-4 p-4 dark:bg-[#3f4042f4] dark:text-neutral-200 text-5xl shadow-2xl dark:contrast-120 bg-neutral-200">
+
+    <div
+      class="display border rounded-lg border-black h-fit shadow-inner dark:bg-neutral-700 flex justify-end items-center text-5xl md:text-7xl overflow-hidden w-full dark:text-white text-black bg-slate-200"
+      placeholder="0"></div>
+
+    <div class="buttonContainer grid grid-cols-4 gap-2 dark:text-white text-3xl md:text-5xl">
+      <button class="btn dark:bg-[#424549] specialOperator p-3 md:p-4" value="clear">C</button>
+      <button class="btn dark:bg-[#424549] specialOperator p-3 md:p-4" value="allClear">AC</button>
+      <button class="btn dark:bg-[#424549] p-3 md:p-4" value="/">&divide;</button>
+      <button class="btn dark:bg-[#424549] p-3 md:p-4" value="*">&times;</button>
+      <button class="btn dark:bg-[#424549] p-3 md:p-4" value="7">7</button>
+      <button class="btn dark:bg-[#424549] p-3 md:p-4" value="8">8</button>
+      <button class="btn dark:bg-[#424549] p-3 md:p-4" value="9">9</button>
+      <button class="btn dark:bg-[#424549] p-3 md:p-4" value="-">-</button>
+      <button class="btn dark:bg-[#424549] p-3 md:p-4" value="4">4</button>
+      <button class="btn dark:bg-[#424549] p-3 md:p-4" value="5">5</button>
+      <button class="btn dark:bg-[#424549] p-3 md:p-4" value="6">6</button>
+      <button class="btn dark:bg-[#424549] p-3 md:p-4" value="+">+</button>
+      <button class="btn dark:bg-[#424549] p-3 md:p-4" value="1">1</button>
+      <button class="btn dark:bg-[#424549] p-3 md:p-4" value="2">2</button>
+      <button class="btn dark:bg-[#424549] p-3 md:p-4" value="3">3</button>
+      <button class="btn specialOperator row-span-2 bg-orange-700! brightness-125 p-3 md:p-4"
+        value="equals">=</button>
+      <button class="btn dark:bg-[#424549] col-span-2 p-3 md:p-4" value="0">0</button>
+      <button class="btn dark:bg-[#424549] font-extrabold p-3 md:p-4" value=".">&middot;</button>
+    </div>
+  </div>
 
 
   <script src="script.js"></script>
